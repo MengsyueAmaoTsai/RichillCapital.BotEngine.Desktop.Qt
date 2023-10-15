@@ -15,7 +15,6 @@ A desktop application for bot management using Qt for Python.
 - isort
 - flake8
 - autopep8
-- pyright
 - briefcase
 - nuitka
 - ms-python.gather
