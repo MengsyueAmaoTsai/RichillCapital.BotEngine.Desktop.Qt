@@ -12,5 +12,6 @@
         "ms-python.black-formatter",
         "ms-python.python",
         "ms-python.gather",
+        "codezombiech.gitignore"
     ]
 }

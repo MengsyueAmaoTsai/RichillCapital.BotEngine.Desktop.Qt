@@ -1,12 +1,25 @@
 [project]
-name = ""
-version = ""
-description = ""
+name = "richillcapital-bot-engine-desktop"
+version = "0.0.1"
+description = "A desktop application for bot management using Qt for Python."
 authors = [
     {name = "Mengsyue Amao Tsai", email = "mengsyue.tsai@outlook.com"},
 ]
-dependencies = []
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 readme = "README.md"
 license = {text = "MIT"}
+
+dependencies = [
+    "aiofile>=3.8.8",
+    "pyside6>=6.5.3",
+]
+
+
+[tool.pdm.scripts]
+start = ""
+dev = ""
+test = "" 
+build = ""
+format = ""
+lint = ""
 
