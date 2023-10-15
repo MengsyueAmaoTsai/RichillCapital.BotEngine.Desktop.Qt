@@ -1,5 +1,18 @@
 {
     "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticSeverityOverrides": {},
+    "python.analysis.extraPaths": [],
+    "python.analysis.logLevel": "Information",
+    "python.analysis.stubPath": "typings",
+    "python.analysis.typeshedPaths": [],
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.pythonPath": "python",
+    "python.venvPath": "",
+    "pyright.disableOrganizeImports": false,
+    "pyright.disableLanguageServices": false,
+
     "cSpell.words": [
         "Dunder",
         "pycache",
