@@ -29,5 +29,14 @@ build_qrc = "pyside6-rcc <path-to.qrc> -o <path-to.py>"
 dev = [
     "tox-pdm>=0.7.0",
     "briefcase>=0.3.15",
+    "flake8>=6.1.0",
+    "flake8-docstrings>=1.7.0",
+    "pep8-naming>=0.13.3",
+    "pylint>=3.0.1",
+    "mypy>=1.6.0",
+    "black>=23.9.1",
+    "autopep8>=2.0.4",
+    "isort>=5.12.0",
+    "pre-commit>=3.5.0",
 ]
 

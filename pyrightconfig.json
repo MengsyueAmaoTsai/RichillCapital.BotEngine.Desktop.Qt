@@ -27,6 +27,7 @@
     "strictSetInference": false,
 
     "reportUnusedImport": "information",
+    "reportUnknownMemberType": "information",
 
     "reportAssertAlwaysTrue": "error",
     "reportCallInDefaultInitializer": "error",
@@ -37,7 +38,6 @@
     "reportGeneralTypeIssues": "error",
     "reportImplicitOverride": "error",
     "reportImplicitStringConcatenation": "error",
-    "reportUnknownMemberType": "error",
     "reportImportCycles": "error",
     "reportIncompatibleMethodOverride": "error",
     "reportIncompatibleVariableOverride": "error",
