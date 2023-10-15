@@ -23,3 +23,7 @@ build = ""
 format = ""
 lint = ""
 
+[tool.pdm.dev-dependencies]
+dev = [
+    "tox-pdm>=0.7.0",
+]
