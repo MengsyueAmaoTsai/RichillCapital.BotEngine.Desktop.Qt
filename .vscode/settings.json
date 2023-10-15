@@ -1,3 +1,6 @@
 {
     "python.analysis.typeCheckingMode": "strict",
+    "cSpell.words": [
+        "pycache"
+    ],
 }

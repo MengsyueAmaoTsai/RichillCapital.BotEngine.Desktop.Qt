@@ -1,0 +1,23 @@
+{
+    // Main Configuration Options.
+    "pythonVersion": "3.11",
+    "pythonPlatform": "Windows",
+    "executionEnvironments": [],
+    "include": ["./src/**/*", "./tests/**/*"],
+    "exclude": ["**/__pycache__"],
+    "typeCheckingMode": "strict",
+    "useLibraryCodeForTypes": true,
+    "reportUnknownMemberType": "none",
+    "ignore": [],
+    "strict": [],
+    "defineConstant": {},
+    "typeshedPath": "",
+    "stubPath": "",
+    "venvPath": "",
+    "verboseOutput": false,
+    "extraPaths": [],
+
+    // Type Check Diagnostics Settings.
+    
+    // Execution Environment Options.
+}
