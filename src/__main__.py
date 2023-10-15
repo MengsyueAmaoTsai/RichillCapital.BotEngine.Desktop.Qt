@@ -1,17 +1,14 @@
-# Copyright (C) 2022 The Qt Company Ltd.
-# SPDX-License-Identifier: LicenseRef-Qt-Commercial
-
 import sys
 from pathlib import Path
 
-from PySide6.QtCore import QObject, Slot
 from PySide6.QtGui import QGuiApplication
-from PySide6.QtQml import QQmlApplicationEngine, QmlElement
+from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtQuickControls2 import QQuickStyle
 
 import core
 
-if __name__ == '__main__':
+try:
+    print("Starting application...\n")
     root_path = Path(__file__).parent.parent
 
     QQuickStyle.setStyle("Material")
@@ -25,3 +22,8 @@ if __name__ == '__main__':
         sys.exit(-1)
 
     sys.exit(app.exec())
+except Exception as exception:
+    print(f"Unexpected error.\n{exception}")
+
+finally:
+    print("\nShutdown completed.")
