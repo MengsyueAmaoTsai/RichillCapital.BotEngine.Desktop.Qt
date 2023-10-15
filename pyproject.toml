@@ -23,6 +23,8 @@ build = "pdm build"
 format = ""
 lint = ""
 
+build_qrc = "pyside6-rcc <path-to.qrc> -o <path-to.py>"
+
 [tool.pdm.dev-dependencies]
 dev = [
     "tox-pdm>=0.7.0",
