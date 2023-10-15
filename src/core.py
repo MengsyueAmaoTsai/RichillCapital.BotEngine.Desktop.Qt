@@ -9,16 +9,12 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine, QmlElement
 from PySide6.QtQuickControls2 import QQuickStyle
 
-
-# To be used on the @QmlElement decorator
-# (QML_IMPORT_MINOR_VERSION is optional)
-QML_IMPORT_NAME = "io.qt.textproperties"
+QML_IMPORT_NAME = "core"
 QML_IMPORT_MAJOR_VERSION = 1
-
+QML_IMPORT_MINOR_VERSION = 0
 
 @QmlElement
-class Bridge(QObject):
-
+class Core(QObject):
     @Slot(str, result=str)
     def getColor(self, s):
         if s.lower() == "red":

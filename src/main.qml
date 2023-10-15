@@ -1,14 +1,12 @@
-// Copyright (C) 2021 The Qt Company Ltd.
-// SPDX-License-Identifier: LicenseRef-Qt-Commercial
+// Qt modules
+import QtQuick 
+import QtQuick.Layouts 
+import QtQuick.Controls
+import QtQuick.Window
+import QtQuick.Controls.Material
 
-
-import QtQuick 2.0
-import QtQuick.Layouts 1.11
-import QtQuick.Controls 2.1
-import QtQuick.Window 2.1
-import QtQuick.Controls.Material 2.1
-
-import io.qt.textproperties 1.0
+// Custom modules
+import core 
 
 ApplicationWindow {
     id: page
@@ -18,7 +16,7 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.Red
 
-    Bridge {
+    Core {
         id: bridge
     }
 
