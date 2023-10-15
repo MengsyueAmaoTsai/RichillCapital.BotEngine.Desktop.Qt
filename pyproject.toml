@@ -16,10 +16,10 @@ dependencies = [
 
 
 [tool.pdm.scripts]
-start = ""
-dev = ""
+start = "./src/__main__.py"
+dev = "./src/__main__.py"
 test = "" 
-build = ""
+build = "pdm build"
 format = ""
 lint = ""
 
