@@ -27,7 +27,7 @@ try:
     qml_path = root_path / "src" / "views" / "App.qml"
     logo_path = str(root_path / "public" / "logo.png")
 
-    QQuickStyle.setStyle("Fusion")
+    # QQuickStyle.setStyle("Fusion")
 
     app = QGuiApplication(sys.argv)
     app.setOrganizationName("Richill Capital")
@@ -46,7 +46,7 @@ try:
         print(f"Import path = {path}")
     print("----------------------------------")
     #endregion
-    
+
     # Load qml
     engine.load(qml_path)
     

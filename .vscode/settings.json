@@ -5,11 +5,12 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticSeverityOverrides": {},
-  "python.analysis.extraPaths": [],
   "python.analysis.logLevel": "Information",
   "python.analysis.stubPath": "typings",
   "python.analysis.typeshedPaths": [],
   "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.extraPaths": [],
+  "python.autoComplete.extraPaths": [],
   "pyright.disableOrganizeImports": false,
   "pyright.disableLanguageServices": false,
 
