@@ -1,18 +1,19 @@
 {
-    "recommendations": [
-        "visualstudioexptteam.vscodeintellicode",
-        "ms-python.mypy-type-checker",
-        "ms-python.vscode-pylance",
-        "ms-python.pylint",
-        "ms-pyright.pyright",
-        "ms-python.debugpy",
-        "ms-python.isort",
-        "ms-python.flake8",
-        "ms-python.autopep8",
-        "ms-python.black-formatter",
-        "ms-python.python",
-        "ms-python.gather",
-        "codezombiech.gitignore",
-        "seanwu.vscode-qt-for-python"
-    ]
+  "recommendations": [
+    "visualstudioexptteam.vscodeintellicode",
+    "ms-python.mypy-type-checker",
+    "ms-python.vscode-pylance",
+    "ms-python.pylint",
+    "ms-pyright.pyright",
+    "ms-python.debugpy",
+    "ms-python.isort",
+    "ms-python.flake8",
+    "ms-python.autopep8",
+    "ms-python.black-formatter",
+    "ms-python.python",
+    "ms-python.gather",
+    "codezombiech.gitignore",
+    "seanwu.vscode-qt-for-python",
+    "felgo.felgo"
+  ]
 }
