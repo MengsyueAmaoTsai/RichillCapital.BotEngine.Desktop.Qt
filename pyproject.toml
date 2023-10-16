@@ -19,7 +19,7 @@ dependencies = [
 start = "./src/__main__.py"
 dev = "./src/__main__.py"
 
-check = "pdm run lint && pdm run format && pdm run build && pdm run test"
+check = { composite = ["pdm run lint", "pdm run format", "pdm run build", "pdm run test"] }
 
 test = "pytest" 
 

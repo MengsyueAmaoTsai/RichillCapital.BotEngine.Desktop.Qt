@@ -10,7 +10,7 @@ import QtQuick.Effects
 import QtQuick.Window
 import QtQuick.Controls.Material
 import Qt.labs.qmlmodels
-
+import QtTest
 //#endregion
 
 ApplicationWindow {

@@ -34,6 +34,7 @@ try:
     app.setOrganizationDomain("richillcapital.com")
     app.setApplicationName("BotEngine Desktop")
     app.setApplicationDisplayName("BotEngine Desktop")
+    app.setWindowIcon(QIcon(logo_path))
 
     engine = QQmlApplicationEngine()
     
@@ -56,7 +57,6 @@ try:
         log.error(f"Can not resolve qml: {qml_path}")
         sys.exit(-1)
 
-    app.setWindowIcon(QIcon(logo_path))
     
     sys.exit(app.exec())
 
