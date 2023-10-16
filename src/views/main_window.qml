@@ -28,18 +28,9 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
 
-// Imports custom modules
-import MainViewModel 
-
 ApplicationWindow {
     id: root
     width: Screen.width * 0.8
     height: Screen.height * 0.8
     visible: true
-    Material.theme: Material.Dark
-    Material.accent: Material.Red
-
-    MainViewModel {
-        id: main_view_model
-    }
 }

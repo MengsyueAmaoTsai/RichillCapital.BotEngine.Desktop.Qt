@@ -1,0 +1,3 @@
+module MyControls
+AppMenuBar 1.0 AppMenuBar.qml
+AppSideBar 1.0 AppSideBar.qml

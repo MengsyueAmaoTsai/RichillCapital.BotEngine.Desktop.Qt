@@ -1,12 +1,11 @@
 import sys
 import logging
 from pathlib import Path
-
+from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from datetime import datetime as DateTime
-
-import view_models
+from PySide6.QtQuickControls2 import QQuickStyle
 
 date_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 
@@ -20,11 +19,14 @@ log = logging.getLogger("BotEngine.Desktop")
 log.addHandler(console_handler)
 log.setLevel(logging.DEBUG)
 
+
 try:
     log.info("Starting application...")
     
     root_path = Path(__file__).parent.parent
     qml_path = root_path / 'src' / 'views' / 'main_window.qml'
+
+    QQuickStyle.setStyle('Fusion')
 
     app = QGuiApplication(sys.argv)
     app.setOrganizationName("Richill Capital")
@@ -34,6 +36,8 @@ try:
 
     engine = QQmlApplicationEngine()
     
+    engine.addImportPath(":/") # import path = qrc:/
+
     # Output import paths to debug console.
     log.info(f"----- QmlEngine import paths -----")
     for path in engine.importPathList():
@@ -42,7 +46,7 @@ try:
 
     # Load qml
     engine.load(qml_path)
-
+    
     if not engine.rootObjects():
         log.error(f"Can not resolve qml: {qml_path}")
         sys.exit(-1)
