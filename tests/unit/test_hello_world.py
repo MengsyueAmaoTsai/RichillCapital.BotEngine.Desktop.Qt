@@ -1,7 +1,11 @@
 
+from view_models.file_system_view_model import FileSystemViewModel
+
+
 class TestHelloWorld():
     """ """
 
     def test_hello_world(self) -> None:
         """ """
-        assert "Hello World" is "Hello World"
+        model = FileSystemViewModel()
+        assert isinstance(model, FileSystemViewModel)
