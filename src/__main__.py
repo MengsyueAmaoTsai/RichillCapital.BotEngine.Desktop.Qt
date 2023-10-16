@@ -3,7 +3,7 @@ import logging
 from pathlib import Path
 from datetime import datetime as DateTime
 from PySide6.QtCore import QUrl, qWarning
-from PySide6.QtGui import QGuiApplication
+from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtQuickControls2 import QQuickStyle
 
@@ -24,9 +24,10 @@ try:
     log.info("Starting application...")
 
     root_path = Path(__file__).parent.parent
-    qml_path = root_path / 'src' / 'views' / 'main_window.qml'
+    qml_path = root_path / "src" / "views" / "main_window.qml"
+    logo_path = str(root_path / "public" / "logo.png")
 
-    QQuickStyle.setStyle('Fusion')
+    QQuickStyle.setStyle("Fusion")
 
     app = QGuiApplication(sys.argv)
     app.setOrganizationName("Richill Capital")
@@ -47,10 +48,14 @@ try:
     # Load qml
     engine.load(qml_path)
     
-    if not engine.rootObjects():
+    objects = engine.rootObjects()
+
+    if not objects:
         log.error(f"Can not resolve qml: {qml_path}")
         sys.exit(-1)
 
+    window = objects[0]
+    window.setIcon(QIcon(logo_path))
     sys.exit(app.exec())
 
 except Exception as exception:

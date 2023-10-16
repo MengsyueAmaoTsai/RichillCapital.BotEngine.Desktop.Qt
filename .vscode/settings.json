@@ -49,7 +49,7 @@
   },
 
   "isort.args": [],
-  "isort.check": false,
+  "isort.check": true,
   "isort.importStrategy": "useBundled",
   "isort.interpreter": [],
   "isort.path": [],
