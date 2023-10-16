@@ -1,16 +1,16 @@
 import sys
 import logging
 from pathlib import Path
+from datetime import datetime as DateTime
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
-from datetime import datetime as DateTime
 from PySide6.QtQuickControls2 import QQuickStyle
 
-date_format = "%Y-%m-%dT%H:%M:%S.%fZ"
+DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
 output_template = "%(asctime)s - [%(levelname)s] - %(name)s\n%(message)s"
-output_template = output_template.replace("%(asctime)s", f"{DateTime.utcnow().strftime(date_format)}")
+output_template = output_template.replace("%(asctime)s", f"{DateTime.utcnow().strftime(DATE_FORMAT)}")
 
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setFormatter(logging.Formatter(output_template))
@@ -22,7 +22,7 @@ log.setLevel(logging.DEBUG)
 
 try:
     log.info("Starting application...")
-    
+
     root_path = Path(__file__).parent.parent
     qml_path = root_path / 'src' / 'views' / 'main_window.qml'
 
@@ -39,7 +39,7 @@ try:
     engine.addImportPath(":/") # import path = qrc:/
 
     # Output import paths to debug console.
-    log.info(f"----- QmlEngine import paths -----")
+    log.info("----- QmlEngine import paths -----")
     for path in engine.importPathList():
         print(f"Import path = {path}")
     print("----------------------------------")
