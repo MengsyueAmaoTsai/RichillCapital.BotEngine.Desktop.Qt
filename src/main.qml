@@ -16,7 +16,7 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.Red
 
-    Core {
+    MainViewModel {
         id: bridge
     }
 

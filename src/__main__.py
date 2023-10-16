@@ -11,8 +11,6 @@ try:
     print("Starting application...\n")
     root_path = Path(__file__).parent.parent
 
-    QQuickStyle.setStyle("Material")
-
     app = QGuiApplication(sys.argv)
 
     engine = QQmlApplicationEngine()
