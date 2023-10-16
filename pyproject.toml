@@ -18,10 +18,11 @@ dependencies = [
 [tool.pdm.scripts]
 start = "./src/__main__.py"
 dev = "./src/__main__.py"
+check = "pdm run lint"
 test = "" 
 build = "pdm build"
 format = ""
-lint = ""
+lint = "pylint src/**/* tests/**/* --rcfile .pylintrc"
 
 build_qrc = "pyside6-rcc <path-to.qrc> -o <path-to.py>"
 
