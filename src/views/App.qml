@@ -8,14 +8,14 @@ import QtQuick.Layouts
 // import QtQuick.Tests
 import QtQuick.Effects
 import QtQuick.Window
-import QtQuick.Controls.Material
+import QtQuick.Controls.Fusion
 import Qt.labs.qmlmodels
 import QtTest
 //#endregion
 
 //#region Custom Imports
 import "../controls" 1.0 as Controls
-import "../interop/js/base.js" as JSInterop
+
 
 //#endregion
 ApplicationWindow {
@@ -24,10 +24,6 @@ ApplicationWindow {
     height: Screen.height * 0.8
     visible: true
 
-    Controls.AppMenuBar {
-    }
-
-    Button {
-        onClicked: JSInterop.ddd()
+    menuBar: Controls.AppMenuBar {
     }
 }

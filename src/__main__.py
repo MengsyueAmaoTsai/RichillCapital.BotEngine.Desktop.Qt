@@ -39,7 +39,7 @@ try:
     engine = QQmlApplicationEngine()
     
     # import path = qrc:/
-    engine.addImportPath(":/")  
+    # engine.addImportPath(":/")  
 
     #region Output import paths to debug console.
     log.info("----- QmlEngine import paths -----")
@@ -56,7 +56,6 @@ try:
     if not objects:
         log.error(f"Can not resolve qml: {qml_path}")
         sys.exit(-1)
-
     
     sys.exit(app.exec())
 
