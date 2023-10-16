@@ -33,8 +33,8 @@ import MainViewModel
 
 ApplicationWindow {
     id: root
-    width: 800
-    height: 400
+    width: Screen.width * 0.8
+    height: Screen.height * 0.8
     visible: true
     Material.theme: Material.Dark
     Material.accent: Material.Red
@@ -45,7 +45,9 @@ ApplicationWindow {
 
     GridLayout {
         id: grid
-        columns: 2
-        rows: 3
+        columns: 1
+        rows: 1
+        Layout.fillWidth: true
+        Layout.fillHeight: true
     }
 }
