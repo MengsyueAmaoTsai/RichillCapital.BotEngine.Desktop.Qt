@@ -30,6 +30,8 @@ try:
     app = QGuiApplication(sys.argv)
 
     engine = QQmlApplicationEngine()
+    log.info(f"QmlEngine import paths: {engine.importPathList()}")
+
     engine.load(qml_path)
 
     if not engine.rootObjects():
