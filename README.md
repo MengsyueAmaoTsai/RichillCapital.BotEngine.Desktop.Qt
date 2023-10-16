@@ -2,6 +2,7 @@
 
 A desktop application for bot management using Qt for Python.
 
+![Tests](https://github.com/MengsyueAmaoTsai/RichillCapital.BotEngineDesktop.Qt/actions/workflows/test.yml/badge.svg)
 
 
 
