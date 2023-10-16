@@ -1,32 +1,12 @@
-/**
-- Module (Namespace) Imports
+//#region Qt Imports 
 
-import <Module> [Major.Minor] [as ModuleAlias]
-ex.
-import QtQuick
-*/
-
-/**
-- C++ Module Imports.   
-  Declared using 
-    QML_IMPORT_NAME
-    QML_IMPORT_MAJOR_VERSION 
-    @QmlElement  
-    @QmlNamedElement
-*/
-
-/**
-- Directory Imports
-
-
-*/
-
-// Imports Qt modules
 import QtQuick 
 import QtQuick.Layouts 
 import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
+
+//#endregion
 
 ApplicationWindow {
     id: root
