@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Entry Point",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/__main__.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
