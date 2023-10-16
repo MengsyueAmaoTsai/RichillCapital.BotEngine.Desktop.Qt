@@ -27,8 +27,8 @@ try:
     qml_path = root_path / "src" / "views" / "App.qml"
     logo_path = str(root_path / "public" / "logo.png")
 
-    # QQuickStyle.setStyle("Fusion")
-
+    QQuickStyle.setStyle("Universal")
+    print(QQuickStyle.name())
     app = QGuiApplication(sys.argv)
     app.setOrganizationName("Richill Capital")
     app.setOrganizationDomain("richillcapital.com")
@@ -37,7 +37,7 @@ try:
     app.setWindowIcon(QIcon(logo_path))
 
     engine = QQmlApplicationEngine()
-    
+
     # import path = qrc:/
     # engine.addImportPath(":/")  
 
