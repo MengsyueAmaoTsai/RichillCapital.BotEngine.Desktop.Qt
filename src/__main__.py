@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime as DateTime
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
-from PySide6.QtQml import QQmlApplicationEngine
+from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType
 from PySide6.QtQuickControls2 import QQuickStyle
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
@@ -54,8 +54,8 @@ try:
         log.error(f"Can not resolve qml: {qml_path}")
         sys.exit(-1)
 
-    window = objects[0]
-    window.setIcon(QIcon(logo_path))
+    app.setWindowIcon(QIcon(logo_path))
+    
     sys.exit(app.exec())
 
 except Exception as exception:
