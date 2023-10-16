@@ -25,15 +25,22 @@ try:
     
     root_path = Path(__file__).parent.parent
     qml_path = root_path / 'src' / 'views' / 'main_window.qml'
-    log.info(f"Root path: {root_path}")
 
     app = QGuiApplication(sys.argv)
+    app.setOrganizationName("Richill Capital")
+    app.setOrganizationDomain("richillcapital.com")
+    app.setApplicationName("BotEngine Desktop")
+    app.setApplicationDisplayName("BotEngine Desktop")
 
     engine = QQmlApplicationEngine()
+    
+    # Output import paths to debug console.
     log.info(f"----- QmlEngine import paths -----")
     for path in engine.importPathList():
         print(f"Import path = {path}")
     print("----------------------------------")
+
+    # Load qml
     engine.load(qml_path)
 
     if not engine.rootObjects():

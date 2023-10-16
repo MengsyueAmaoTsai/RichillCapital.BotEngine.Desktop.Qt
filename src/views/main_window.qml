@@ -42,12 +42,4 @@ ApplicationWindow {
     MainViewModel {
         id: main_view_model
     }
-
-    GridLayout {
-        id: grid
-        columns: 1
-        rows: 1
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-    }
 }

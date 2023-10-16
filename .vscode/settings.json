@@ -50,5 +50,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "cSpell.words": ["Dunder", "pycache", "typeshed", "venv"]
+  "cSpell.words": ["Dunder", "pycache", "richillcapital", "typeshed", "venv"]
 }
