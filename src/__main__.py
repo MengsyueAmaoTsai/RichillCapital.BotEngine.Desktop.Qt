@@ -7,6 +7,7 @@ from PySide6.QtQml import QQmlApplicationEngine
 from datetime import datetime as DateTime
 
 import core
+import file
 
 date_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 

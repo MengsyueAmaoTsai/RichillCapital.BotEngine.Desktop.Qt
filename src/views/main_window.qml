@@ -7,6 +7,7 @@ import QtQuick.Controls.Material
 
 // Custom modules
 import core 
+import file
 
 ApplicationWindow {
     id: root
@@ -16,9 +17,14 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.Red
 
+    FileWatcherViewModel {
+        id: file_watcher
+    }
+
     MainViewModel {
         id: main_view_model
     }
+
 
     GridLayout {
         id: grid
