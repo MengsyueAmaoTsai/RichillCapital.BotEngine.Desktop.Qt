@@ -1,4 +1,3 @@
-
-function test() {
+const ddd = () => {
     console.log('IM JS')
 }
