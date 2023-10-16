@@ -22,7 +22,7 @@ check = "pdm run lint"
 test = "" 
 build = "pdm build"
 format = ""
-lint = "pylint src/**/* tests/**/* -j 4 -ry --rcfile .pylintrc msg-template='\n[{category} - {msg_id}] {symbol} | {msg}\n{path} ({line}, {column})\n'"
+lint = "pylint src/**/* tests/**/* -j 4 -ry --rcfile .pylintrc --output-format=colorized,parseable --msg-template='\n[{category} - {msg_id}] {symbol} | {msg}\n{path} ({line}, {column})\n'"
 
 build_qrc = "pyside6-rcc <path-to.qrc> -o <path-to.py>"
 
