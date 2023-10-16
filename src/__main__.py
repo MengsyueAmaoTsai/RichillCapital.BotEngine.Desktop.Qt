@@ -10,7 +10,7 @@ import view_models
 
 date_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 
-output_template = "%(asctime)s - [%(levelname)s] - %(name)s\n%(message)s\n"
+output_template = "%(asctime)s - [%(levelname)s] - %(name)s\n%(message)s"
 output_template = output_template.replace("%(asctime)s", f"{DateTime.utcnow().strftime(date_format)}")
 
 console_handler = logging.StreamHandler(sys.stdout)
@@ -30,8 +30,10 @@ try:
     app = QGuiApplication(sys.argv)
 
     engine = QQmlApplicationEngine()
-    log.info(f"QmlEngine import paths: {engine.importPathList()}")
-
+    log.info(f"----- QmlEngine import paths -----")
+    for path in engine.importPathList():
+        print(f"Import path = {path}")
+    print("----------------------------------")
     engine.load(qml_path)
 
     if not engine.rootObjects():
