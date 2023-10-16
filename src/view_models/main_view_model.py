@@ -1,7 +1,7 @@
 from PySide6.QtCore import QObject, Slot
 from PySide6.QtQml import QmlElement
 
-QML_IMPORT_NAME = "core"
+QML_IMPORT_NAME = "MainViewModel"
 QML_IMPORT_MAJOR_VERSION = 1
 QML_IMPORT_MINOR_VERSION = 0
 

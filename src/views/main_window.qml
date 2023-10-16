@@ -6,8 +6,7 @@ import QtQuick.Window
 import QtQuick.Controls.Material
 
 // Custom modules
-import core 
-import file
+import MainViewModel 
 
 ApplicationWindow {
     id: root
@@ -16,10 +15,6 @@ ApplicationWindow {
     visible: true
     Material.theme: Material.Dark
     Material.accent: Material.Red
-
-    FileWatcherViewModel {
-        id: file_watcher
-    }
 
     MainViewModel {
         id: main_view_model

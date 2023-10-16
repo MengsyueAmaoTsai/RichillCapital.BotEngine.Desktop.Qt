@@ -6,8 +6,7 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from datetime import datetime as DateTime
 
-import core
-import file
+import view_models
 
 date_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 
