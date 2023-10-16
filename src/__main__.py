@@ -24,7 +24,7 @@ try:
     log.info("Starting application...")
     
     root_path = Path(__file__).parent.parent
-    qml_path = root_path / 'src' / 'main.qml'
+    qml_path = root_path / 'src' / 'views' / 'main_window.qml'
     log.info(f"Root path: {root_path}")
 
     app = QGuiApplication(sys.argv)
