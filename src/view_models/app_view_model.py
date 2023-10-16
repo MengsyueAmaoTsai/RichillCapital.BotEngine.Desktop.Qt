@@ -1,13 +1,13 @@
 from PySide6.QtCore import QObject, Slot
 from PySide6.QtQml import QmlElement
 
-QML_IMPORT_NAME = "MainViewModel"
+QML_IMPORT_NAME = "AppViewModel"
 QML_IMPORT_MAJOR_VERSION = 1
 QML_IMPORT_MINOR_VERSION = 0
 
 
 @QmlElement
-class MainViewModel(QObject):
+class AppViewModel(QObject):
 
     def __init__(self):
         super().__init__()

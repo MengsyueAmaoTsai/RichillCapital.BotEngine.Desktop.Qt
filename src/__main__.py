@@ -24,7 +24,7 @@ try:
     log.info("Starting application...")
 
     root_path = Path(__file__).parent.parent
-    qml_path = root_path / "src" / "views" / "main_window.qml"
+    qml_path = root_path / "src" / "views" / "App.qml"
     logo_path = str(root_path / "public" / "logo.png")
 
     QQuickStyle.setStyle("Fusion")
@@ -37,14 +37,16 @@ try:
 
     engine = QQmlApplicationEngine()
     
-    engine.addImportPath(":/") # import path = qrc:/
+    # import path = qrc:/
+    engine.addImportPath(":/")  
 
-    # Output import paths to debug console.
+    #region Output import paths to debug console.
     log.info("----- QmlEngine import paths -----")
     for path in engine.importPathList():
         print(f"Import path = {path}")
     print("----------------------------------")
-
+    #endregion
+    
     # Load qml
     engine.load(qml_path)
     
