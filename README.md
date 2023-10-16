@@ -9,15 +9,18 @@ A desktop application for bot management using Qt for Python.
 
 #### Notes
 - Shiboken
-- pylint
-- mypy
-- black
-- isort
+
 - flake8
+
+- isort
+- black
 - autopep8
+
+- mypy
+- pyright
+
 - briefcase
 - nuitka
-- ms-python.gather
 
 ### Qt Modules Overview
 https://doc.qt.io/qtforpython-6/modules.html
