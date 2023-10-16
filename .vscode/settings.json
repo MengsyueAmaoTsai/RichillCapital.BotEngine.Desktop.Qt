@@ -1,22 +1,54 @@
 {
-    "python.analysis.typeCheckingMode": "strict",
-    "python.analysis.diagnosticMode": "workspace",
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.diagnosticSeverityOverrides": {},
-    "python.analysis.extraPaths": [],
-    "python.analysis.logLevel": "Information",
-    "python.analysis.stubPath": "typings",
-    "python.analysis.typeshedPaths": [],
-    "python.analysis.useLibraryCodeForTypes": true,
-    "python.pythonPath": "python",
-    "python.venvPath": "",
-    "pyright.disableOrganizeImports": false,
-    "pyright.disableLanguageServices": false,
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticSeverityOverrides": {},
+  "python.analysis.extraPaths": [],
+  "python.analysis.logLevel": "Information",
+  "python.analysis.stubPath": "typings",
+  "python.analysis.typeshedPaths": [],
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.pythonPath": "python",
+  "python.venvPath": "",
+  "pyright.disableOrganizeImports": false,
+  "pyright.disableLanguageServices": false,
 
-    "cSpell.words": [
-        "Dunder",
-        "pycache",
-        "typeshed",
-        "venv"
-    ],
+  // Qt extensions.
+  "qtForPython.designer.options": [],
+  "qtForPython.linguist.path": "",
+  "qtForPython.lrelease.options": [],
+  "qtForPython.lrelease.path": "",
+  "qtForPython.lupdate.options": [
+    "-ts",
+    "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}.ts"
+  ],
+  "qtForPython.lupdate.path": "",
+  "qtForPython.qml.options": [],
+  "qtForPython.qml.path": "",
+  "qtForPython.qmlformat.options": [],
+  "qtForPython.qmlformat.path": "",
+  "qtForPython.qmlls.enabled": true,
+  "qtForPython.qmlls.options": [],
+  "qtForPython.qmlls.path": "",
+  "qtForPython.rcc.liveExecution.enabled": true,
+  "qtForPython.rcc.liveExecution.glob": "**/*.qrc",
+  "qtForPython.rcc.options": [
+    "-o",
+    "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}_rc.py"
+  ],
+  "qtForPython.rcc.path": "",
+  "qtForPython.uic.liveExecution.enabled": true,
+  "qtForPython.uic.liveExecution.glob": "**/*.ui",
+  "qtForPython.uic.options": [
+    "-o",
+    "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}_ui.py"
+  ],
+  "qtForPython.uic.path": "",
+
+  // Json
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "cSpell.words": ["Dunder", "pycache", "typeshed", "venv"]
 }

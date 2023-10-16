@@ -43,7 +43,6 @@ ApplicationWindow {
         id: main_view_model
     }
 
-
     GridLayout {
         id: grid
         columns: 2
