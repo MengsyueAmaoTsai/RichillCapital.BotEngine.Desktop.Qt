@@ -12,6 +12,7 @@
         "ms-python.black-formatter",
         "ms-python.python",
         "ms-python.gather",
-        "codezombiech.gitignore"
+        "codezombiech.gitignore",
+        "seanwu.vscode-qt-for-python"
     ]
 }
