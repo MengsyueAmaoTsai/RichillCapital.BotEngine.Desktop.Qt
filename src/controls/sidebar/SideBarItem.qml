@@ -9,7 +9,7 @@ Item {
     implicitWidth: 200
 
     property string text 
-    
+
     signal clicked()
 
 
@@ -40,7 +40,7 @@ Item {
                 id: label
                 Layout.leftMargin: 10
                 visible: true
-                text: 'text'
+                text: root.text
                 // font.pointSize: 13
                 // font.weight: Font.Medium
                 // opacity: root.textOpacity
@@ -52,6 +52,4 @@ Item {
         anchors.fill: parent 
         onClicked: root.clicked() 
     }
-    
-
 }

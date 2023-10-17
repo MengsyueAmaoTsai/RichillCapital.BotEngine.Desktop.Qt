@@ -78,6 +78,26 @@ ApplicationWindow {
 
                             onClicked: console.log("CCCC")
                         }
+
+                        Rectangle {
+                            id: smallSeperator1
+                            Layout.preferredWidth: parent.width * 0.61
+                            Layout.preferredHeight: 2
+                            Layout.alignment: Qt.AlignHCenter
+                            Layout.topMargin: 16
+
+                        }
+                        
+                        SideBar.SideBarItem {
+                            id: testSideBarItem2
+                            text: "Hello2"
+                            Layout.topMargin: 16
+                            Layout.leftMargin: 10
+                            // imageWidth: 31
+                            // image: Icons.sidebarDownload
+
+                            onClicked: console.log("CCCC2")
+                        }                        
                     }
                 }
             }
