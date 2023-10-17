@@ -10,9 +10,11 @@
   "python.analysis.typeshedPaths": [],
   "python.analysis.useLibraryCodeForTypes": true,
   "python.analysis.extraPaths": [],
-  "python.autoComplete.extraPaths": [],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
   "pyright.disableOrganizeImports": false,
   "pyright.disableLanguageServices": false,
+  "python.autoComplete.extraPaths": [],
 
   "mypy-type-checker.args": [],
   "mypy-type-checker.importStrategy": "useBundled",
@@ -75,32 +77,32 @@
   "qtForPython.linguist.options": [],
   "qtForPython.lrelease.options": [],
   "qtForPython.lrelease.path": "",
+  "qtForPython.lupdate.path": "",
   "qtForPython.lupdate.options": [
     "-ts",
     "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}.ts"
   ],
-  "qtForPython.lupdate.path": "",
-  "qtForPython.qml.options": [],
   "qtForPython.qml.path": "",
-  "qtForPython.qmlformat.options": [],
+  "qtForPython.qml.options": [],
   "qtForPython.qmlformat.path": "",
+  "qtForPython.qmlformat.options": [],
+  "qtForPython.qmlls.path": "",
   "qtForPython.qmlls.enabled": true,
   "qtForPython.qmlls.options": [],
-  "qtForPython.qmlls.path": "",
+  "qtForPython.rcc.path": "",
   "qtForPython.rcc.liveExecution.enabled": true,
   "qtForPython.rcc.liveExecution.glob": "**/*.qrc",
   "qtForPython.rcc.options": [
     "-o",
     "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}_rc.py"
   ],
-  "qtForPython.rcc.path": "",
+  "qtForPython.uic.path": "",
   "qtForPython.uic.liveExecution.enabled": true,
   "qtForPython.uic.liveExecution.glob": "**/*.ui",
   "qtForPython.uic.options": [
     "-o",
     "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}_ui.py"
   ],
-  "qtForPython.uic.path": "",
 
   "[json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",

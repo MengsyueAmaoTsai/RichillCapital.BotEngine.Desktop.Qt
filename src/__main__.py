@@ -19,7 +19,6 @@ log = logging.getLogger("BotEngine.Desktop")
 log.addHandler(console_handler)
 log.setLevel(logging.DEBUG)
 
-
 try:
     log.info("Starting application...")
 
@@ -27,14 +26,13 @@ try:
     qml_path = root_path / "src" / "views" / "App.qml"
     logo_path = str(root_path / "public" / "logo.png")
 
-    QQuickStyle.setStyle("Universal")
-    print(QQuickStyle.name())
     app = QGuiApplication(sys.argv)
     app.setOrganizationName("Richill Capital")
     app.setOrganizationDomain("richillcapital.com")
     app.setApplicationName("BotEngine Desktop")
     app.setApplicationDisplayName("BotEngine Desktop")
     app.setWindowIcon(QIcon(logo_path))
+    log.info(f"Using built-in style: {QQuickStyle.name()}")
 
     engine = QQmlApplicationEngine()
 
