@@ -21,17 +21,17 @@ dev = "./src/__main__.py"
 
 check = { composite = ["pdm run lint", "pdm run format", "pdm run build", "pdm run test"] }
 
-test = "pytest --cov-config=.coveragerc" 
+test = { composite = ["pytest --cov-config=.coveragerc"] } 
 
-build = ""
+build = { composite = ["pdm run build_deps", "pdm run build_ts"] }
 build_ts = "tsc -p tsconfig.build.json"
 build_qrc = "pyside6-rcc bot-engine-desktop.qrc -o src/resources/app_rc.py"
 build_deps = "pdm export -o requirements.txt -f requirements --without-hashes -o requirements.txt"
 
-format = ""
+format = { composite = [] }
 format_black = ""
 
-lint = ""
+lint = { composite = ["pdm run lint_pylint"] }
 lint_pylint = "pylint src/**/*.py tests/**/*.py -j 4 -ry --rcfile .pylintrc --output-format=colorized,parseable --msg-template='\n[{category} - {msg_id}] {symbol} | {msg}\n{path} ({line}, {column})\n'"
 
 [tool.pdm.dev-dependencies]
