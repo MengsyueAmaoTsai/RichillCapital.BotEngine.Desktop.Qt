@@ -15,6 +15,7 @@ import QtTest
 
 //#region Custom Imports
 import './views/login' as Login
+import './js.js' as JS
 
 import AppViewModel 
 
@@ -42,7 +43,6 @@ ApplicationWindow {
         console.log("close the side bar")
     }
 
-
     RowLayout {
         id: rootLayout
         anchors.fill: parent
@@ -66,6 +66,7 @@ ApplicationWindow {
     // Define methods
     function loadPage(page, sideBarItem, doSamePageCheck = true) {
         console.log('load page')
+        JS.switchPage(page, sideBarItem)
     }
 
     QtObject {

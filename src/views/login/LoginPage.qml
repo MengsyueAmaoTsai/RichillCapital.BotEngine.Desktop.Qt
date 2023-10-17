@@ -3,6 +3,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
+import '../../js.js' as JS
 
 Item {
     id: root
@@ -16,7 +17,10 @@ Item {
 
             Button {
                 text: 'Continue with Microsoft'
-                onClicked: () => { console.log('login msft') }
+                onClicked: () => { 
+                    console.log('login msft') 
+                    JS.switchPage('', '')
+                }
             }
             
             Button {
