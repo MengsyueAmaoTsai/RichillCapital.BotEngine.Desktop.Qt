@@ -14,7 +14,7 @@ import QtTest
 //#endregion
 
 //#region Custom Imports
-import "../controls" 1.0 as Controls
+import "./controls" 1.0 as Controls
 
 //#endregion
 ApplicationWindow {
