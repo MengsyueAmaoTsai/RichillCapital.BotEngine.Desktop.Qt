@@ -14,7 +14,7 @@ import QtTest
 //#endregion
 
 //#region Custom Imports
-// import "./controls" 1.0 as Controls
+import "./controls/sidebar" 1.0 as SideBar
 import AppViewModel 
 
 //#endregion
@@ -56,6 +56,29 @@ ApplicationWindow {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     // color:
+                }
+
+                Flickable {
+                    id: flickable
+                    flickableDirection: Filickable.VerticalFlick
+                    boundsMovement: Flickable.StopAtBonds
+                    maximumFlickVelocity: 1000
+                    flickDeceleration: 5000
+                    anchors.fill: parent
+                    contentHeight: layout.implicitHeight
+
+                    ColumnLayout {
+                        SideBar.SideBarItem {
+                            id: testSideBarItem
+                            text: "Hello"
+                            Layout.topMargin: 16
+                            Layout.leftMargin: 10
+                            // imageWidth: 31
+                            // image: Icons.sidebarDownload
+
+                            onClicked: console.log("CCCC")
+                        }
+                    }
                 }
             }
         }
