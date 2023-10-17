@@ -14,7 +14,8 @@ import QtTest
 //#endregion
 
 //#region Custom Imports
-import "./controls/sidebar" 1.0 as SideBar
+import './views/login' as Login
+
 import AppViewModel 
 
 //#endregion
@@ -33,75 +34,24 @@ ApplicationWindow {
         value: "New value"
     }
 
-    // UI 
-    Item {
-        id: sidebar
-        implicitHeight: Window.height
-        // implicitWidth: 
+    function openSideBar(params) {
+        console.log("open the side bar")
+    }
 
-        Pane {
-            id: sidebarContainer
-            anchors.fill: parent
-            padding: 0
-            background: RowLayout {
-                id: layout
-                spacing: 0
+    function closeSideBar(params) {
+        console.log("close the side bar")
+    }
 
-                Rectangle {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    // color:
-                }
+    StackView {
+        id: stackView
+        Layout.fillWidth: true
+        Layout.fillHeight: true
 
-                Rectangle {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    // color:
-                }
+        initialItem: loginPage
+    }
 
-                Flickable {
-                    id: flickable
-                    // flickableDirection: Filickable.VerticalFlick
-                    // boundsMovement: Flickable.StopAtBonds
-                    maximumFlickVelocity: 1000
-                    flickDeceleration: 5000
-                    anchors.fill: parent
-                    contentHeight: layout.implicitHeight
-
-                    ColumnLayout {
-                        SideBar.SideBarItem {
-                            id: testSideBarItem
-                            text: "Hello"
-                            Layout.topMargin: 16
-                            Layout.leftMargin: 10
-                            // imageWidth: 31
-                            // image: Icons.sidebarDownload
-
-                            onClicked: console.log("CCCC")
-                        }
-
-                        Rectangle {
-                            id: smallSeperator1
-                            Layout.preferredWidth: parent.width * 0.61
-                            Layout.preferredHeight: 2
-                            Layout.alignment: Qt.AlignHCenter
-                            Layout.topMargin: 16
-
-                        }
-                        
-                        SideBar.SideBarItem {
-                            id: testSideBarItem2
-                            text: "Hello2"
-                            Layout.topMargin: 16
-                            Layout.leftMargin: 10
-                            // imageWidth: 31
-                            // image: Icons.sidebarDownload
-
-                            onClicked: console.log("CCCC2")
-                        }                        
-                    }
-                }
-            }
-        }
+    Component {
+        id: loginPage
+        Login.LoginPage {}
     }
 }
