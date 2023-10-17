@@ -2,10 +2,13 @@ import sys
 import logging
 from pathlib import Path
 from datetime import datetime as DateTime
+
+
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType
 from PySide6.QtQuickControls2 import QQuickStyle
+from view_models.app_view_model import AppViewModel
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
@@ -32,12 +35,29 @@ try:
     app.setApplicationName("BotEngine Desktop")
     app.setApplicationDisplayName("BotEngine Desktop")
     app.setWindowIcon(QIcon(logo_path))
+
+    QQuickStyle.setStyle("Default")
     log.info(f"Using built-in style: {QQuickStyle.name()}")
 
-    engine = QQmlApplicationEngine()
+    # qInstallMessageHandler(logging.messageHandler)
 
+    # Set fonts if we needs
+
+
+    # Start up
+    engine = QQmlApplicationEngine()
     # import path = qrc:/
-    # engine.addImportPath(":/")  
+    # engine.addImportPath("qrc:/modules")
+    # engine.addImportPath(root_path / "/src/presentation/qt_tree_view/qml/")  
+
+    # Register types to QML engine.
+    qmlRegisterType(AppViewModel, "AppViewModel", 1, 0, "AppViewModel")
+
+    # Authentication if we needs.
+
+    # qmlRegisterSingletonInstance("Type, 1, 0)
+
+    # register Enums qmlRegisterUncreatableMetaObject
 
     #region Output import paths to debug console.
     log.info("----- QmlEngine import paths -----")

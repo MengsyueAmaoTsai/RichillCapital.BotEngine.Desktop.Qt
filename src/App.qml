@@ -14,12 +14,22 @@ import QtTest
 //#endregion
 
 //#region Custom Imports
-import "./controls" 1.0 as Controls
+// import "./controls" 1.0 as Controls
+import AppViewModel 
 
 //#endregion
 ApplicationWindow {
     id: root
+    visible: true
+    visibility: Window.Maximized
     width: Screen.width * 0.8
     height: Screen.height * 0.8
-    visible: true
+    minimumHeight: 400
+    minimumWidth: 650
+
+    // Python Types
+    AppViewModel {
+        id: viewModel
+        value: "New value"
+    }
 }
