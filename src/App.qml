@@ -42,16 +42,36 @@ ApplicationWindow {
         console.log("close the side bar")
     }
 
-    StackView {
-        id: stackView
-        Layout.fillWidth: true
-        Layout.fillHeight: true
 
-        initialItem: loginPage
+    RowLayout {
+        id: rootLayout
+        anchors.fill: parent
+        spacing: 0
+        // Side bar here
+        StackView {
+            id: stackView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            initialItem: loginPage
+        }
     }
 
+    // Page wrappers.
     Component {
         id: loginPage
         Login.LoginPage {}
+    }
+
+    // Define methods
+    function loadPage(page, sideBarItem, doSamePageCheck = true) {
+        console.log('load page')
+    }
+
+    QtObject {
+        id: internal
+        function reloadApplication() {
+
+        }
     }
 }
