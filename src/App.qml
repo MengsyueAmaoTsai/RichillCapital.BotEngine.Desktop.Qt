@@ -8,7 +8,7 @@ import QtQuick.Layouts
 // import QtQuick.Tests
 import QtQuick.Effects
 import QtQuick.Window
-import QtQuick.Controls.Fusion
+// import QtQuick.Controls.Fusion
 import Qt.labs.qmlmodels
 import QtTest
 //#endregion

@@ -23,7 +23,7 @@ try:
     log.info("Starting application...")
 
     root_path = Path(__file__).parent.parent
-    qml_path = root_path / "src" / "views" / "App.qml"
+    qml_path = root_path / "src" / "App.qml"
     logo_path = str(root_path / "public" / "logo.png")
 
     app = QGuiApplication(sys.argv)
