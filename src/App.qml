@@ -44,6 +44,7 @@ ApplicationWindow {
             anchors.fill: parent
             padding: 0
             background: RowLayout {
+                id: layout
                 spacing: 0
 
                 Rectangle {
@@ -60,8 +61,8 @@ ApplicationWindow {
 
                 Flickable {
                     id: flickable
-                    flickableDirection: Filickable.VerticalFlick
-                    boundsMovement: Flickable.StopAtBonds
+                    // flickableDirection: Filickable.VerticalFlick
+                    // boundsMovement: Flickable.StopAtBonds
                     maximumFlickVelocity: 1000
                     flickDeceleration: 5000
                     anchors.fill: parent

@@ -29,7 +29,7 @@ Item {
                 Image {
                     id: icon
                     // sourceSize.width: root.imageWidth
-                    sourceSize.height: root.imageHeight
+                    // sourceSize.height: root.imageHeight
                     // fillMode: 
                     anchors.centerIn: parent
                     antialiasing: false
