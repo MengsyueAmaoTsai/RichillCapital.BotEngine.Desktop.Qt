@@ -24,3 +24,4 @@ class AppViewModel(QObject):
         if self._value != val:
             self._value = val
             self.value_changed.emit()
+    

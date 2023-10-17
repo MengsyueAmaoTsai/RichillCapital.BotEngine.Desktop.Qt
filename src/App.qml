@@ -32,4 +32,32 @@ ApplicationWindow {
         id: viewModel
         value: "New value"
     }
+
+    // UI 
+    Item {
+        id: sidebar
+        implicitHeight: Window.height
+        // implicitWidth: 
+
+        Pane {
+            id: sidebarContainer
+            anchors.fill: parent
+            padding: 0
+            background: RowLayout {
+                spacing: 0
+
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    // color:
+                }
+
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    // color:
+                }
+            }
+        }
+    }
 }
