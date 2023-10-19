@@ -24,7 +24,7 @@ import './js.js' as JS
 import AppViewModel 
 
 ApplicationWindow {
-    id: root
+    id: mainWindow
     
     visible: true
     height: Screen.height * .8
