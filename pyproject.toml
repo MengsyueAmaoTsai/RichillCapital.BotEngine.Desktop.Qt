@@ -5,7 +5,7 @@ description = "A desktop application for bot management using Qt for Python."
 authors = [
     {name = "Mengsyue Amao Tsai", email = "mengsyue.tsai@outlook.com"},
 ]
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.12,<3.13"
 readme = "README.md"
 license = {text = "MIT"}
 
