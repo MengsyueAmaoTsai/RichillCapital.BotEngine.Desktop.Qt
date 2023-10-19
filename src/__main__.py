@@ -6,7 +6,7 @@ from datetime import datetime as DateTime
 
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
-from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType
+from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonInstance, qmlRegisterModule, qmlRegisterUncreatableMetaObject, qmlRegisterUncreatableType, qmlRegisterSingletonType,qmlClearTypeRegistrations
 from PySide6.QtQuickControls2 import QQuickStyle
 from view_models.app_view_model import AppViewModel
 
@@ -51,8 +51,7 @@ try:
     # engine.addImportPath(root_path / "/src/presentation/qt_tree_view/qml/")  
 
     # Register types to QML engine.
-    qmlRegisterType(AppViewModel, "AppViewModel", 1, 0, "AppViewModel")
-
+    
     # Authentication if we needs.
 
     # qmlRegisterSingletonInstance("Type, 1, 0)
