@@ -9,6 +9,8 @@ import '../../js.js' as JS
 Flickable {
     id: root 
     
+    contentHeight: Window.height < layout.implicitHeight ? layout.implicitHeight : Window.height
+
     Page {
         id: page
         anchors.fill: parent
@@ -17,8 +19,9 @@ Flickable {
         }
 
         ColumnLayout {
-            width: parent.width
-            spacing: 0
+            id: layout
+            anchors.centerIn: parent
+            width: 544
 
             Button {
                 text: 'Sign-In with Microsoft'

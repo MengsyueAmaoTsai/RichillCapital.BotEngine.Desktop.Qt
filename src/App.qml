@@ -33,6 +33,9 @@ ApplicationWindow {
     minimumHeight: 400
     visible: true
 
+    Shortcut {
+    }
+
     RowLayout {
         id: layout
         anchors.fill: parent
@@ -40,18 +43,19 @@ ApplicationWindow {
 
         AppSideBar {
             id: sidebar
-            visible: true
+            visible: stackView.pageHasSideBar
             z: 1
         }
 
         // Content
         StackView {
             id: stackView
-            property bool hasSideBar: false
+            property bool pageHasSideBar: false
 
             Layout.fillWidth: true
             Layout.fillHeight: true
             initialItem: signInPage
+
             popEnter: null
             popExit: null
             pushEnter: null
@@ -69,5 +73,12 @@ ApplicationWindow {
     Component {
         id: strategiesPage
         StrategiesPage {}
+    }
+
+    Timer {
+        id: spamStopper
+        property bool available: true
+        interval: 1000
+        onTriggered: spamStopper.available = true
     }
 }

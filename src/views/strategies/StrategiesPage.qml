@@ -17,9 +17,20 @@ Page {
     DropArea {
         id: dropArea
         anchors.fill: parent
+        
+        ColumnLayout {
+            id: layout
+            anchors.fill: parent
+            spacing: 0
+            
+            HorizontalHeaderView {
+                id: header
+                syncView: table
+            }
 
-        Button {
-            text: 'test'
+            TableView {
+                id: table
+            }            
         }
     }
 }
