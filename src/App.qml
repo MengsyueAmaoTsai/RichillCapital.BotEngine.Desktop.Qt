@@ -15,6 +15,7 @@ import QtTest
 
 //#region Custom Imports
 import './views/signIn' 
+import './views/strategies' 
 import './js.js' as JS
 
 import AppViewModel 
@@ -55,5 +56,10 @@ ApplicationWindow {
     Component {
         id: signInPage
         SignInPage {}
+    }
+
+    Component {
+        id: strategiesPage
+        StrategiesPage {}
     }
 }
