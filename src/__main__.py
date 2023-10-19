@@ -3,7 +3,7 @@ import logging
 from pathlib import Path
 from datetime import datetime as DateTime
 
-
+import os 
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonInstance, qmlRegisterModule, qmlRegisterUncreatableMetaObject, qmlRegisterUncreatableType, qmlRegisterSingletonType,qmlClearTypeRegistrations
@@ -23,6 +23,8 @@ log.addHandler(console_handler)
 log.setLevel(logging.DEBUG)
 
 try:
+    os.environ["QT_QUICK_CONTROLS_STYLE"] = "Basic"
+    
     log.info("Starting application...")
 
     root_path = Path(__file__).parent.parent
@@ -47,7 +49,9 @@ try:
     # Start up
     engine = QQmlApplicationEngine()
     # import path = qrc:/
-    # engine.addImportPath("qrc:/modules")
+    module_path = root_path / "src" / "rui_qt" / "fluent"
+    engine.addImportPath(module_path)
+    print(f"Fluent UI plugin dir -> {module_path}")
     # engine.addImportPath(root_path / "/src/presentation/qt_tree_view/qml/")  
 
     # Register types to QML engine.
