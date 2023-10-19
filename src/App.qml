@@ -16,6 +16,9 @@ import QtTest
 //#region Custom Imports
 import './views/signIn' 
 import './views/strategies' 
+
+import './controls/sidebar'
+
 import './js.js' as JS
 
 import AppViewModel 
@@ -34,7 +37,12 @@ ApplicationWindow {
         id: layout
         anchors.fill: parent
         spacing: 0
-        // SideBar
+
+        AppSideBar {
+            id: sidebar
+            visible: true
+            z: 1
+        }
 
         // Content
         StackView {
