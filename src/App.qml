@@ -14,8 +14,8 @@ import QtTest
 //#endregion
 
 //#region Custom Imports
-import './views/signIn' 
-import './views/strategies' 
+import './views/bots' 
+import './views/signin' 
 
 import './controls/sidebar'
 
@@ -25,16 +25,10 @@ import AppViewModel
 
 ApplicationWindow {
     id: root
-    property int defaultMinWidth: 650
-    property int sidebarMinWidth: 810
-    property bool notifyAboutUpdates: true
-
-    minimumWidth: 650
-    minimumHeight: 400
+    
     visible: true
-
-    Shortcut {
-    }
+    height: Screen.height * .8
+    width: Screen.width * .8
 
     RowLayout {
         id: layout
@@ -43,25 +37,18 @@ ApplicationWindow {
 
         AppSideBar {
             id: sidebar
-            visible: stackView.pageHasSideBar
+            visible: true
             z: 1
         }
 
-        // Content
         StackView {
-            id: stackView
-            property bool pageHasSideBar: false
-
+            id: content
+            initialItem: signInPage
             Layout.fillWidth: true
             Layout.fillHeight: true
-            initialItem: signInPage
-
-            popEnter: null
-            popExit: null
-            pushEnter: null
-            pushExit: null
-            replaceEnter: null
-            replaceExit: null
+            background: Rectangle {
+                color: '#009900'
+            }
         }
     }
 
@@ -71,14 +58,7 @@ ApplicationWindow {
     }
 
     Component {
-        id: strategiesPage
-        StrategiesPage {}
-    }
-
-    Timer {
-        id: spamStopper
-        property bool available: true
-        interval: 1000
-        onTriggered: spamStopper.available = true
+        id: botsPage
+        BotsPage {}
     }
 }
