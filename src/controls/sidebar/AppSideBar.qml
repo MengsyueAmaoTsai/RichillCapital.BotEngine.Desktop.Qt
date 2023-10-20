@@ -10,7 +10,7 @@ Item {
     id: root
 
     implicitHeight: Window.height
-    implicitWidth: this.closedWidth
+    implicitWidth: internal.closedWidth
 
     Pane {
         id: container 
@@ -101,7 +101,7 @@ Item {
         }
     }
     QtObject {
-        id: this
+        id: internal
         property int openedWidth: 232
         property int closedWidth: 72
         property bool isOpened: false

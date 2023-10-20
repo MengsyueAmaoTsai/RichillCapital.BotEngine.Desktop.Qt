@@ -15,7 +15,7 @@ Item {
     signal clicked()
 
     implicitHeight: 44
-    implicitWidth: this.closedWidth
+    implicitWidth: internal.closedWidth
 
     Pane {
         id: container 
@@ -60,7 +60,7 @@ Item {
     }
     
     QtObject {
-        id: this 
+        id: internal 
         property int openedWidth: 177
         property int closedWidth: 52
     }
@@ -74,7 +74,7 @@ Item {
         id: openAnimation
         target: container
         property: "width"
-        to: this.openedWidth
+        to: internal.openedWidth
         duration: 250 
         easing.type: Easing.InOutQuad
     }
@@ -83,7 +83,7 @@ Item {
         id: closeAnimation
         target: container
         property: "width"
-        to: this.closedWidth
+        to: internal.closedWidth
         duration: 250 
         easing.type: Easing.InOutQuad
     }
