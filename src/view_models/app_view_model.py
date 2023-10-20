@@ -1,7 +1,6 @@
 import asyncio
 from pathlib import Path
-from PySide6.QtCore import QObject, Property, Slot, Signal, QFileSystemWatcher
-from aiofile import AIOFile, LineReader, Writer
+from PySide6.QtCore import QObject, Property, Slot, Signal
 from view_models.monitor_view_model import MonitorViewModel
 import requests 
 import json
