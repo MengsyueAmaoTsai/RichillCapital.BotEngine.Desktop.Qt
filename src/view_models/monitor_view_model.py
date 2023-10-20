@@ -2,8 +2,10 @@
 
 import asyncio
 from pathlib import Path
-from PySide6.QtCore import QObject, Property, Slot, Signal, QFileSystemWatcher
+
 from aiofile import AIOFile, LineReader
+from PySide6.QtCore import Property, QFileSystemWatcher, QObject, Signal, Slot
+
 
 class MonitorViewModel(QObject):
     new_signal =  Signal()

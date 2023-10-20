@@ -1,13 +1,18 @@
-import sys
 import logging
-from pathlib import Path
+import os
+import sys
 from datetime import datetime as DateTime
+from pathlib import Path
 
-import os 
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
-from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonInstance, qmlRegisterModule, qmlRegisterUncreatableMetaObject, qmlRegisterUncreatableType, qmlRegisterSingletonType,qmlClearTypeRegistrations
+from PySide6.QtQml import (QQmlApplicationEngine, qmlClearTypeRegistrations,
+                           qmlRegisterModule, qmlRegisterSingletonInstance,
+                           qmlRegisterSingletonType, qmlRegisterType,
+                           qmlRegisterUncreatableMetaObject,
+                           qmlRegisterUncreatableType)
 from PySide6.QtQuickControls2 import QQuickStyle
+
 from view_models import AppViewModel
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"

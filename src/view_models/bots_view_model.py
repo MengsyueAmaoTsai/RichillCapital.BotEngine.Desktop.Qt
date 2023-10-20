@@ -1,5 +1,5 @@
 
-from PySide6.QtCore import QObject, Property, Slot, Signal, QFileSystemWatcher
+from PySide6.QtCore import Property, QFileSystemWatcher, QObject, Signal, Slot
 
 
 class BotsViewModel(QObject):

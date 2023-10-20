@@ -1,10 +1,12 @@
 import asyncio
-from pathlib import Path
-from PySide6.QtCore import QObject, Property, Slot, Signal
-from view_models.monitor_view_model import MonitorViewModel
 import json
+from pathlib import Path
 
 from aiohttp import ClientSession
+from PySide6.QtCore import Property, QObject, Signal, Slot
+
+from view_models.monitor_view_model import MonitorViewModel
+
 
 class AppViewModel(QObject):
     new_signal =  Signal()
