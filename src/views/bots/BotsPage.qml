@@ -13,7 +13,6 @@ Flickable {
         id: page
         anchors.fill: parent
         background: Rectangle {
-            color: '#999999'
         }
 
         ColumnLayout {
@@ -61,6 +60,8 @@ Flickable {
                 }
 
                 delegate: Rectangle {
+                    implicitHeight: 25
+                    implicitWidth: 100
                     Text {
                         text: display
                         anchors.centerIn: parent

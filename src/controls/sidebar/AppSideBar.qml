@@ -5,6 +5,7 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Layouts
 
+import '../'
 import '../../js.js' as JS
 
 Item {
@@ -35,6 +36,10 @@ Item {
             id: flickable
             anchors.fill: parent
             contentHeight: layout.implicitHeight
+            flickableDirection: Flickable.VerticalFlick
+            boundsMovement: Flickable.StopAtBounds
+            maximumFlickVelocity: 1000
+            flickDeceleration: 5000
 
             ColumnLayout {
                 id: layout
@@ -44,6 +49,23 @@ Item {
 
                 RowLayout {
                     id: logo
+                    Layout.topMargin: 14
+                    Layout.leftMargin: 14
+                    spacing: 20
+
+                    Logo {
+                        id: icon
+                        Layout.preferredWidth: 44
+                        Layout.preferredHeight: 44
+                    }
+
+                    Label {
+                        id: logoLabel
+                        visible: false
+                        text: 'BotEngine Desktop'
+                        font.bold: true
+                        font.pointSize: 16
+                    }
                 }
 
                 Rectangle {
