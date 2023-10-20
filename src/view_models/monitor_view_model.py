@@ -52,6 +52,8 @@ class MonitorViewModel(QObject, FileSystemEventHandler):
         }
         asyncio.run(self.emit_signal_async(path.stem, signal))
 
+        # TODO: new_signal.emit()
+
     async def emit_signal_async(self, bot_id: str, signal):
         async with ClientSession() as session:
             async with session.post(f"http://localhost:10005/api/bots/{bot_id}/signals", data=signal) as response:

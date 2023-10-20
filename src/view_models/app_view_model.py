@@ -15,6 +15,7 @@ class AppViewModel(QObject):
         super().__init__()
         self._bots = []
         self.monitor_view_model = MonitorViewModel()
+        
 
     @Slot()
     def load_bots(self) -> None:
