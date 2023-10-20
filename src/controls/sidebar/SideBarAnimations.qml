@@ -22,7 +22,15 @@ Item {
             duration: internal.slowDuration
             easing.type: internal.easingType
         }
-
+        
+        NumberAnimation {
+            target: profileBox
+            property: "arrowRotation"
+            to: 180
+            duration: internal.slowDuration
+            easing.type: internal.easingType
+        }
+        
         PropertyAnimation {
             target: logoLabel
             property: 'visible'
@@ -65,7 +73,14 @@ Item {
             duration: internal.slowDuration
             easing.type: internal.easingType
         }
-        
+        NumberAnimation {
+            target: profileBox
+            property: "arrowRotation"
+            to: 0
+            duration: internal.slowDuration
+            easing.type: internal.easingType
+        }        
+
         PropertyAnimation {
             target: logoLabel
             property: "visible"

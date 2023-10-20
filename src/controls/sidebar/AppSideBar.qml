@@ -174,7 +174,7 @@ Item {
             }
         }
 
-        SideBarAnumations {
+        SideBarAnimations {
             id: animations
             // sidebar: root
             closedSidebarWidth: internal.closedWidth
