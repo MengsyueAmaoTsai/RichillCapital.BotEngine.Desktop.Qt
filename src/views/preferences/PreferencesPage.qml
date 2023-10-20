@@ -11,7 +11,7 @@ Flickable {
     Page {
         id: page
         anchors.fill: parent
-        background: {
+        background: Rectangle {
             color: '#999999'
         }
     }

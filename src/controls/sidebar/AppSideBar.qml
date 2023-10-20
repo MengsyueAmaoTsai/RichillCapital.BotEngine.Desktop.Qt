@@ -5,6 +5,7 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Layouts
 
+import '../../js.js' as JS
 
 Item {
     id: root
@@ -60,6 +61,8 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Bots'
+
+                    onClicked: JS.switchPage(botsPage)
                 }
 
                 SideBarItem {
@@ -69,6 +72,7 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Monitor'
+                    onClicked: JS.switchPage(monitorPage)
                 }
 
                 SideBarItem {
@@ -78,15 +82,17 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Analyzer'
+                    onClicked: JS.switchPage(analyzerPage)
                 }       
 
                 SideBarItem {
-                    id: settingsItem
+                    id: preferencesItem
                     Layout.topMargin: 16
                     Layout.leftMargin: 10
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
-                    text: 'Settings'
+                    text: 'Preferences'
+                    onClicked: JS.switchPage(preferencesPage)
                 }          
 
                 SideBarItem {

@@ -9,6 +9,7 @@ import QtQuick.Window
 import './views/signin'
 import './views/bots'
 import './views/monitor'
+import './views/analyzer'
 import './views/preferences'
 
 import './controls/sidebar'
@@ -68,6 +69,10 @@ ApplicationWindow {
         id: monitorPage
         MonitorPage {}
     }
+    Component {
+        id: analyzerPage
+        AnalyzerPage {}
+    }    
     Component {
         id: preferencesPage
         PreferencesPage {}
