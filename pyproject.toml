@@ -27,7 +27,8 @@ check = { composite = ["pdm run lint", "pdm run format", "pdm run build", "pdm r
 test = { composite = ["pytest --cov-config=.coveragerc"] } 
 
 build = { composite = ["pdm run build_deps", "pdm run build_ts"] }
-build_nuitka = "nuitka --standalone --plugin-enable=pyside6 ./src/__main__.py "
+build_nuitka = "nuitka --standalone --plugin-enable=pyside6 ./src/__main__.py"
+build_briefcase = "briefcase"
 build_ts = "tsc -p tsconfig.build.json"
 build_qrc = "pyside6-rcc bot-engine-desktop.qrc -o src/resources/app_rc.py"
 build_deps = "pdm export -o requirements.txt -f requirements --without-hashes -o requirements.txt"
