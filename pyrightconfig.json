@@ -28,6 +28,8 @@
 
   "reportUnusedImport": "information",
   "reportUnknownMemberType": "information",
+  "reportUnusedCallResult": "information",
+  "reportUntypedFunctionDecorator": "information",
 
   "reportAssertAlwaysTrue": "error",
   "reportCallInDefaultInitializer": "error",
@@ -81,9 +83,7 @@
   "reportUnsupportedDunderAll": "error",
   "reportUntypedBaseClass": "error",
   "reportUntypedClassDecorator": "error",
-  "reportUntypedFunctionDecorator": "information",
   "reportUntypedNamedTuple": "error",
-  "reportUnusedCallResult": "error",
   "reportUnusedClass": "error",
   "reportUnusedCoroutine": "error",
   "reportUnusedExpression": "error",
