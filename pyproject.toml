@@ -33,8 +33,9 @@ build_deps = "pdm export -o requirements.txt -f requirements --without-hashes -o
 format = { composite = [] }
 format_black = ""
 
-lint = { composite = ["pdm run lint_pylint"] }
+lint = { composite = ["pdm run lint_pylint", "pdm run lint_flake8"] }
 lint_pylint = "pylint src/**/*.py tests/**/*.py -j 4 -ry --rcfile .pylintrc --output-format=colorized,parseable --msg-template='\n[{category} - {msg_id}] {symbol} | {msg}\n{path} ({line}, {column})\n'"
+lint_flake8 = "flake8"
 
 [tool.pdm.dev-dependencies]
 dev = [

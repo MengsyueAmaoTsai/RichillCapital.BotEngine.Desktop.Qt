@@ -8,7 +8,6 @@ A desktop application for bot management using Qt for Python.
 #### Notes
 - Shiboken
 
-- flake8
 
 - isort
 - black
