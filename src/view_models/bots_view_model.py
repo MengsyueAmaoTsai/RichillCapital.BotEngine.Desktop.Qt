@@ -1,10 +1,10 @@
 
+from PySide6.QtCore import QObject, Property, Slot, Signal, QFileSystemWatcher
 
 
-
-class BotsViewModel():
+class BotsViewModel(QObject):
 
     def __init__(self) -> None:
-        pass
+        super().__init__()
 
     

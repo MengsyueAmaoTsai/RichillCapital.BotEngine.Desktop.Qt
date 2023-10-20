@@ -2,8 +2,9 @@ import asyncio
 from pathlib import Path
 from PySide6.QtCore import QObject, Property, Slot, Signal
 from view_models.monitor_view_model import MonitorViewModel
-import requests 
 import json
+
+from aiohttp import ClientSession
 
 class AppViewModel(QObject):
     new_signal =  Signal()
@@ -17,13 +18,19 @@ class AppViewModel(QObject):
     def load_bots(self) -> None:
         self._bots.clear()
         self.monitor_view_model.clear_paths()
+        
+        bots = asyncio.run(self.get_bots_async())
 
-        response = requests.get("http://localhost:10005/api/bots")  
-        data = json.loads(response.content)
+        self._bots.extend(bots)
 
-        self._bots.extend(data)
+        for bot in bots:
+            id = bot["id"]
+            self.monitor_view_model.add_file(Path("C://BotEngineDesktop//Data") / f"{id}.sig")
+            self.monitor_view_model.add_file(Path("C://BotEngineDesktop//Data") / f"{id}.exc")
 
-        for bot in data:
-            self.monitor_view_model.add_file(Path("C://BotEngineDesktop//Data") / f"{bot["id"]}.sig")
-            self.monitor_view_model.add_file(Path("C://BotEngineDesktop//Data") / f"{bot["id"]}.exc")
+    async def get_bots_async(self):
+        async with ClientSession() as session:
+            async with session.get("http://localhost:10005/api/bots") as response:
+                content = await response.text()
+                return json.loads(content)
             
