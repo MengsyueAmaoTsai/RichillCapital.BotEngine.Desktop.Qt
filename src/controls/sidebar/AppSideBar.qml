@@ -198,6 +198,10 @@ Item {
         }
     }    
 
+    Component.onCompleted: () => {
+        root.changeSelectedItem(botsItem)
+    }
+
     function changeSelectedItem(item: SideBarItem) {
         root.currentItem.selected = false
         root.currentItem = item
