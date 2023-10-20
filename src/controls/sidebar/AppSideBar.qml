@@ -142,7 +142,35 @@ Item {
                     onClicked: () => {
                         changeSelectedItem(quitItem)
                     }
-                }                                                             
+                }                
+
+                Rectangle {
+                    id: bottomSeparator
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 2
+                    color: '#ffffff'
+                }
+
+                ProfileBox {
+                    id: profileBox
+                    currentSidebarWidth: root.width
+                    closedSidebarWidth: internal.closedWidth
+                    Layout.alignment: Qt.AlignBottom
+                    Layout.topMargin: 2
+
+                    onClicked: () => {
+                        if(profilePopup.opened)
+                            profilePopup.close();
+                        else
+                            profilePopup.open();
+                    }                    
+                }
+
+                ProfilePopup {
+                    id: profilePopup
+                    x: 12
+                    y: profileBox.y - implicitHeight + 6
+                } 
             }
         }
 
