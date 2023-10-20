@@ -81,6 +81,5 @@ ApplicationWindow {
     Component.onCompleted: {
         console.log('ON APP Completed.');
         appViewModel.load_bots();
-        appViewModel.start_monitor();
     }
 }

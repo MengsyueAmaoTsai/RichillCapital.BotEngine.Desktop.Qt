@@ -19,17 +19,22 @@ class MonitorViewModel(QObject):
 
     def add_file(self, path: Path) -> None:
         _ = self.file_system_watcher.addPath(str(path))
+        print(f"ADD {path}")
     
+    def clear_paths(self):    
+        for path in self.file_system_watcher.files():
+            self.file_system_watcher.removePath(path)
+        
     def on_file_changed(self, path: str) -> None:
         """Slot function called when the monitored file is changed."""
         asyncio.run(self.read_file_async(Path(path)))
 
     async def read_file_async(self, path: Path) -> None:
         
-        if path.suffix not in ['.sig']:
+        if path.suffix not in [".sig"]:
             return
         
-        async with AIOFile(path, 'r') as file:
+        async with AIOFile(path, "r", encoding="utf-8") as file:
             async for line in LineReader(file):
                 print(line)        
     

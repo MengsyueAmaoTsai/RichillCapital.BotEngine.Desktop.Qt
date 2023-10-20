@@ -12,6 +12,7 @@ license = {text = "MIT"}
 dependencies = [
     "aiofile>=3.8.8",
     "pyside6>=6.5.3",
+    "requests>=2.31.0",
 ]
 
 
