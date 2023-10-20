@@ -8,7 +8,7 @@ from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonInstance, qmlRegisterModule, qmlRegisterUncreatableMetaObject, qmlRegisterUncreatableType, qmlRegisterSingletonType,qmlClearTypeRegistrations
 from PySide6.QtQuickControls2 import QQuickStyle
-from view_models.app_view_model import AppViewModel
+from view_models import AppViewModel
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
