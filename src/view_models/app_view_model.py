@@ -19,10 +19,8 @@ class AppViewModel(QObject):
     @Slot()
     def load_bots(self) -> None:
         self._bots.clear()
-        
         bots = asyncio.run(self.get_bots_async())
         self._bots.extend(bots)
-
 
     async def get_bots_async(self):
         async with ClientSession() as session:

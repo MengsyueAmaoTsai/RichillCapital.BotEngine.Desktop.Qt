@@ -2,7 +2,6 @@
 
 import asyncio
 from pathlib import Path
-from typing import override
 
 from aiofile import AIOFile, LineReader
 from PySide6.QtCore import Property, QFileSystemWatcher, QObject, Signal, Slot
@@ -21,7 +20,6 @@ class MonitorViewModel(QObject, FileSystemEventHandler):
         _ = self.observer.schedule(self, "C://BotEngineDesktop//Data", recursive=False)
         self.observer.start()
     
-    @override
     def on_modified(self, event):
         path = Path(event.src_path)
 

@@ -18,6 +18,7 @@ from PySide6.QtQml import (
     qmlRegisterUncreatableType,
 )
 from PySide6.QtQuickControls2 import QQuickStyle
+from dependency_injection import Container
 
 from view_models import AppViewModel
 
@@ -51,6 +52,9 @@ try:
 
     QQuickStyle.setStyle("Default")
     log.info(f"Using built-in style: {QQuickStyle.name()}")
+
+    # DI Container
+    container = Container()
 
     # Start up
     engine = QQmlApplicationEngine()
