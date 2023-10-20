@@ -8,7 +8,6 @@ from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonInstance, qmlRegisterModule, qmlRegisterUncreatableMetaObject, qmlRegisterUncreatableType, qmlRegisterSingletonType,qmlClearTypeRegistrations
 from PySide6.QtQuickControls2 import QQuickStyle
-from view_models.app_view_model import AppViewModel
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
@@ -41,35 +40,14 @@ try:
     QQuickStyle.setStyle("Default")
     log.info(f"Using built-in style: {QQuickStyle.name()}")
 
-    # qInstallMessageHandler(logging.messageHandler)
-
-    # Set fonts if we needs
-
-
     # Start up
     engine = QQmlApplicationEngine()
-    # import path = qrc:/
-    module_path = root_path / "src" / "rui_qt" / "fluent"
-    engine.addImportPath(module_path)
-    print(f"Fluent UI plugin dir -> {module_path}")
-    # engine.addImportPath(root_path / "/src/presentation/qt_tree_view/qml/")  
 
-    # Register types to QML engine.
-    
-    # Authentication if we needs.
-
-    # qmlRegisterSingletonInstance("Type, 1, 0)
-
-    # register Enums qmlRegisterUncreatableMetaObject
-
-    #region Output import paths to debug console.
     log.info("----- QmlEngine import paths -----")
     for path in engine.importPathList():
         print(f"Import path = {path}")
     print("----------------------------------")
-    #endregion
 
-    # Load qml
     engine.load(qml_path)
     
     objects = engine.rootObjects()
