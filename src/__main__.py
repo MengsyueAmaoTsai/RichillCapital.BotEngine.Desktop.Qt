@@ -8,6 +8,7 @@ from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType, qmlRegisterSingletonInstance, qmlRegisterModule, qmlRegisterUncreatableMetaObject, qmlRegisterUncreatableType, qmlRegisterSingletonType,qmlClearTypeRegistrations
 from PySide6.QtQuickControls2 import QQuickStyle
+from view_models.app_view_model import AppViewModel
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
@@ -43,6 +44,9 @@ try:
     # Start up
     engine = QQmlApplicationEngine()
 
+    app_view_model = AppViewModel()
+    engine.rootContext().setContextProperty('appViewModel', app_view_model)
+    
     log.info("----- QmlEngine import paths -----")
     for path in engine.importPathList():
         print(f"Import path = {path}")

@@ -11,6 +11,9 @@ import '../../js.js' as JS
 Item {
     id: root
 
+    property SideBarItem currentItem: internal.defaultItem
+    property bool isOpened: false
+
     implicitHeight: Window.height
     implicitWidth: internal.closedWidth
 
@@ -124,16 +127,54 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Quit'
+                    onClicked: () => {
+                    }
                 }                                                             
             }
         }
+
+        SideBarAnumations {
+            id: animations
+            // sidebar: root
+            closedSidebarWidth: internal.closedWidth
+            openedSidebarWidth: internal.openedWidth
+        }
     }
+
     QtObject {
         id: internal
         property int openedWidth: 232
         property int closedWidth: 72
         property bool isOpened: false
 
-        property SideBarItem defaultItem
+        property SideBarItem defaultItem: botsItem
+    }
+
+    Shortcut {
+        sequence: "Ctrl+O"
+        onActivated: () => {
+            root.open()
+        }
+    }    
+
+    function changeSelectedItem(item: SideBarItem) {
+        root.currentItem.selected = false
+        root.currentItem = item
+        root.currentItem.selected = true
+    }
+
+    function open() {
+        animations.openAnimation.start()
+        root.currentItem.openAnimation.start()
+        root.isOpened = true
+        console.log(root.isOpened)
+    }
+
+    function close() {
+
+    }
+
+    function reset() {
+
     }
 }

@@ -77,4 +77,8 @@ ApplicationWindow {
         id: preferencesPage
         PreferencesPage {}
     }
+
+    Component.onCompleted: {
+        console.log('ON APP Completed.')
+    }
 }

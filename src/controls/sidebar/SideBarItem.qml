@@ -11,7 +11,12 @@ Item {
     property int imageWidth: 30
     property int imageHeight
     property bool preserveImageFit: true
+    property real textOpacity: 0
 
+    property alias openAnimation: openAnimation
+    property alias closeAnimation: closeAnimation
+    property alias labelVisibility: label.visible
+    
     signal clicked()
 
     implicitHeight: 44
@@ -55,6 +60,7 @@ Item {
                 visible: true
                 font.weight: Font.Medium
                 font.pointSize: 14
+                opacity: root.opacity
             }
         }
     }
