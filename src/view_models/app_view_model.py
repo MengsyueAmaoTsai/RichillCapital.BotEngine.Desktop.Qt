@@ -19,16 +19,10 @@ class AppViewModel(QObject):
     @Slot()
     def load_bots(self) -> None:
         self._bots.clear()
-        self.monitor_view_model.clear_paths()
         
         bots = asyncio.run(self.get_bots_async())
-
         self._bots.extend(bots)
 
-        for bot in bots:
-            id = bot["id"]
-            self.monitor_view_model.add_file(Path("C://BotEngineDesktop//Data") / f"{id}.sig")
-            self.monitor_view_model.add_file(Path("C://BotEngineDesktop//Data") / f"{id}.exc")
 
     async def get_bots_async(self):
         async with ClientSession() as session:
