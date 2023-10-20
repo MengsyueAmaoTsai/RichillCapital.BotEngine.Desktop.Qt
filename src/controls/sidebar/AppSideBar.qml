@@ -87,7 +87,10 @@ Item {
                     imageUrl: '../../../static/logo.png'
                     text: 'Bots'
 
-                    onClicked: JS.switchPage(botsPage)
+                    onClicked: () => {
+                        JS.switchPage(botsPage)
+                        changeSelectedItem(botsItem)
+                    }
                 }
 
                 SideBarItem {
@@ -97,7 +100,10 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Monitor'
-                    onClicked: JS.switchPage(monitorPage)
+                    onClicked: () => {
+                        JS.switchPage(monitorPage)
+                        changeSelectedItem(monitorItem)
+                    }
                 }
 
                 SideBarItem {
@@ -107,7 +113,10 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Analyzer'
-                    onClicked: JS.switchPage(analyzerPage)
+                    onClicked: () => {
+                        JS.switchPage(analyzerPage)
+                        changeSelectedItem(analyzerItem)
+                    }
                 }       
 
                 SideBarItem {
@@ -117,7 +126,10 @@ Item {
                     imageWidth: 31
                     imageUrl: '../../../static/logo.png'
                     text: 'Preferences'
-                    onClicked: JS.switchPage(preferencesPage)
+                    onClicked: () => {
+                        JS.switchPage(preferencesPage)
+                        changeSelectedItem(preferencesItem)
+                    }
                 }          
 
                 SideBarItem {
@@ -128,6 +140,7 @@ Item {
                     imageUrl: '../../../static/logo.png'
                     text: 'Quit'
                     onClicked: () => {
+                        changeSelectedItem(quitItem)
                     }
                 }                                                             
             }
@@ -171,10 +184,15 @@ Item {
     }
 
     function close() {
-
+        animations.closeAnimation.start()
+        root.currentItem.closeAnimation.start()
+        root.isOpened = false
+        console.log(root.isOpened)
     }
 
     function reset() {
-
+        close();
+        changeSelectedItem(internal.defaultItem);
+        root.open = false;
     }
 }

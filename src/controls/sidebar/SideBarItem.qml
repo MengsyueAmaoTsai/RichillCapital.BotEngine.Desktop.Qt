@@ -40,7 +40,7 @@ Item {
                 Layout.preferredWidth: 52
                 Layout.preferredHeight: 44
                 radius: 4
-                color: 'transparent'
+                color: root.selected ? '#ffffff' : 'transparent'
 
                 Image {
                     id: icon
