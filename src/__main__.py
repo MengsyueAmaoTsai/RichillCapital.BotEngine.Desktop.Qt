@@ -1,3 +1,4 @@
+
 import logging
 import os
 import sys
@@ -6,11 +7,16 @@ from pathlib import Path
 
 from PySide6.QtCore import QUrl, qWarning
 from PySide6.QtGui import QGuiApplication, QIcon
-from PySide6.QtQml import (QQmlApplicationEngine, qmlClearTypeRegistrations,
-                           qmlRegisterModule, qmlRegisterSingletonInstance,
-                           qmlRegisterSingletonType, qmlRegisterType,
-                           qmlRegisterUncreatableMetaObject,
-                           qmlRegisterUncreatableType)
+from PySide6.QtQml import (
+    QQmlApplicationEngine,
+    qmlClearTypeRegistrations,
+    qmlRegisterModule,
+    qmlRegisterSingletonInstance,
+    qmlRegisterSingletonType,
+    qmlRegisterType,
+    qmlRegisterUncreatableMetaObject,
+    qmlRegisterUncreatableType,
+)
 from PySide6.QtQuickControls2 import QQuickStyle
 
 from view_models import AppViewModel
